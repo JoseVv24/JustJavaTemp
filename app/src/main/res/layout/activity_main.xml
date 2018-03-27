@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coffeerose">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.example.justjava.MainActivity">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/home" />
+
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="Enter Your Name"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Toppings"
+                    android:fontFamily="cursive"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="#890033"
+                    android:textSize="24sp"
+                    android:padding="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:textAllCaps="true" />
+
+                <CheckBox
+                    android:id="@+id/whippedCream_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:fontFamily="serif"
+                    android:buttonTint="@android:color/white"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#63022A"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="check_whippedCream"
+                    android:text="Whipped Cream"/>
+
+
+                <CheckBox
+                    android:id="@+id/chocolate_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:buttonTint="#D77133"
+                    android:background="#6B320C"
+                    android:textColor="#D77133"
+                    android:layout_marginLeft="-33dp"
+                    android:onClick="check_chocolate"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Chocolate"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="4dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="cursive"
+                    android:background="#890033"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:onClick="btn"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Quantity"
+                    android:textAllCaps="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="112dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:onClick="decrement"
+                        android:textSize="24sp"
+                        android:backgroundTint="@color/colorAccent"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/quantity_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="2"
+                        android:textStyle="bold"
+                        android:background="@color/colorPrimaryDark"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp" />
+
+                    <Button
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:textSize="24sp"
+                        android:backgroundTint="@color/colorAccent"
+                        android:onClick="increment"
+                        android:text="+" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/error_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:layout_gravity="center"
+                    android:background="#ff0000"
+                    android:padding="4dp"
+                    android:text="Negative Coffee Cups??"
+                    android:textStyle="italic"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+        <!--
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="cursive"
+                    android:padding="4dp"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:background="#890033"
+                    android:text="Order Summary"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/order_summary_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#9ff522"
+                    android:text="\u20B9 10"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />  -->
+
+
+        <Button
+            android:id="@+id/buttonToast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:onClick="submitOrder"
+            android:text="Order"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#3d44ef"
+            android:textAllCaps="true" />
+
+
+    </LinearLayout>
+
+</ScrollView>
